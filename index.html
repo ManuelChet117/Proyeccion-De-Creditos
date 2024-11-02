@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyección de Créditos - AYNL,A</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Proyección de Créditos</h1>
+        <form id="loanForm">
+            <label for="nombreCliente">Nombre del Cliente:</label>
+            <input type="text" id="nombreCliente" placeholder="Ingrese el nombre del cliente" required>
+
+            <label for="capital">Capital Solicitado:</label>
+            <input type="number" id="capital" placeholder="Ingrese el capital" required>
+
+            <label for="tasa">Tasa de Interés Anual (%):</label>
+            <input type="number" id="tasa" placeholder="Ingrese la tasa de interés" required>
+
+            <label for="plazo">Plazo (en meses):</label>
+            <input type="number" id="plazo" placeholder="Ingrese el plazo" required>
+
+            <label for="tipoPago">Tipo de Pago:</label>
+            <select id="tipoPago" required>
+                <option value="saldo">Sobre Saldos</option>
+                <option value="cuota">Cuota Fija</option>
+            </select>
+
+            <button type="submit">Calcular</button>
+            <button type="button" id="generarPDF">Generar PDF</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
